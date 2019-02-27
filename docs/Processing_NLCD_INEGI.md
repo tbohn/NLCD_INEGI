@@ -11,6 +11,13 @@ This step requires the ESRI ArcGIS application, and uses arcpy scripts in the "t
 
 The end result of this step should be ascii-format ESRI raster files, in geographic projection, with cell size of 0.000350884 degrees.
 
+The SERIE_X products correspond to years as follows:
+ - SERIE_I: 1985
+ - SERIE_II: 1993
+ - SERIE_III: 2002
+ - SERIE_IV: 2007
+ - SERIE_V: 2011
+
 ## 2. Preparation of NLCD Raster Files
 
 Download the following NLCD products from https://www.mrlc.gov/data:

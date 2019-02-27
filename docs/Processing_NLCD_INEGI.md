@@ -2,7 +2,7 @@
 
 ## 1. Harmonization and Rasterization of INEGI Polygon Classifications
 
-This step starts with the Usos del Suelo y Vegetacion SERIE I - V shapefiles.  The procedure for harmonizing the classification schemes of these shapefiles with the NLCD 2011 classification, and converting them to rasters is described in [Processing of INEGI USOSV dataset.docx](./Processing of INEGI USOSV dataset.docx).
+This step starts with the Usos del Suelo y Vegetacion SERIE I - V shapefiles.  The procedure for harmonizing the classification schemes of these shapefiles with the NLCD 2011 classification, and converting them to rasters is described in [Processing of INEGI USOSV dataset.docx](./Processing\ of\ INEGI\ USOSV\ dataset.docx).
 
 This step requires the ESRI ArcGIS application, and uses arcpy scripts in the "tools/INEGI" directory.
 

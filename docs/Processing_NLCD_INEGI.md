@@ -42,7 +42,7 @@ For all of the INEGI and NLCD rasters, all pixels outside the land/political bou
 
 For each raster file, run the following script:
 
-wrap_grid_multi_clip.asc.pl RASTER int LAT0 LAT1 LON0 LON1 1 16 0 DATADIR/ORGANIZATION/YEAR/asc.1deg.clip PREFIX >& log.wrap_grid_multi_clip.asc.pl.txt
+wrap_grid_multi_clip.asc.pl RASTER int LAT0 LAT1 LON0 LON1 1 16 0 DATADIR/ORGANIZATION/YEAR/asc.clip.1deg PREFIX >& log.wrap_grid_multi_clip.asc.pl.txt
 
 where
 
@@ -62,7 +62,7 @@ NLCD's 1992 product was created by a different method than later years. To recon
 
 To retain the more detailed NLCD 2011 classification scheme, we used the retrofit only to identify pixels where changes have occurred. In only those pixels, the classes of the 1992 map replace those of 2001. To perform this step, run:
 
-wrap_construct_1992_from_2001_and_retro.pl DATADIR/NLCD/2001/asc.1deg.clip nlcd DATADIR/NLCD/1992/asc.1deg.clip nlcd DATADIR/NLCD/retrofit/asc.1deg.clip nlcd DATADIR/NLCD/1992.retro/asc.1deg.clip nlcd >& log.wrap_construct_1992_from_2001_and_retro.pl.txt
+wrap_construct_1992_from_2001_and_retro.pl DATADIR/NLCD/2001/asc.clip.1deg nlcd DATADIR/NLCD/1992/asc.clip.1deg nlcd DATADIR/NLCD/retrofit/asc.clip.1deg nlcd DATADIR/NLCD/1992.retro/asc.clip.1deg nlcd >& log.wrap_construct_1992_from_2001_and_retro.pl.txt
 
 where
 
@@ -72,7 +72,7 @@ where
 
 Run the command:
 
-wrap_grid_overlay.pl DATADIR/INEGI/YEAR_I/asc.1deg.clip inegi DATADIR/NLCD/YEAR_N/asc.1deg.clip nlcd int 0 16 0 DATADIR/NLCD_INEGI/YEAR_OUT/asc.1deg.clip nlcd_inegi >& log.wrap_grid_overlay.pl.txt
+wrap_grid_overlay.pl DATADIR/INEGI/YEAR_I/asc.clip.1deg inegi DATADIR/NLCD/YEAR_N/asc.clip.1deg nlcd int 0 16 0 DATADIR/NLCD_INEGI/YEAR_OUT/asc.clip.1deg nlcd_inegi >& log.wrap_grid_overlay.pl.txt
 
 where
 

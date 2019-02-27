@@ -2,10 +2,7 @@
 
 ## 1. Harmonization and Rasterization of INEGI Polygon Classifications
 
-(add link to wherever we end up putting the INEGI data)
-
-This step starts with the Usos del Suelo y Vegetacion SERIE I - V shapefiles.
-The procedure for harmonizing the classification schemes of these shapefiles with the NLCD 2011 classification, and converting them to rasters is described in "Processing of INEGI USOSV dataset.docx".
+This step starts with the Usos del Suelo y Vegetacion SERIE I - V shapefiles.  The procedure for harmonizing the classification schemes of these shapefiles with the NLCD 2011 classification, and converting them to rasters is described in `Processing of INEGI USOSV dataset.docx <Processing of INEGI USOSV dataset.docx>`_.
 
 This step requires the ESRI ArcGIS application, and uses arcpy scripts in the "tools/INEGI" directory.
 
@@ -18,9 +15,12 @@ The SERIE_X products correspond to years as follows:
  - SERIE_IV: 2007
  - SERIE_V: 2011
 
+The resulting processed products are available `here
+<https://zenodo.org/record/xxxxxxxx>`_
+
 ## 2. Preparation of NLCD Raster Files
 
-Download the following NLCD products from https://www.mrlc.gov/data:
+Download the following NLCD products from `MRLC <https://www.mrlc.gov/data>`_:
  - NLCD 2011 Land Cover (CONUS)
  - NLCD 2001 Land Cover (CONUS)
  - NLCD 1992 Land Cover (CONUS)

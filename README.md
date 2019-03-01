@@ -4,11 +4,11 @@ This project contains scripts used to created harmonized US-Mexico land cover cl
 
 ## Processing stages:
 1. Harmonize the original INEGI Uso del Suelo y Vegetacion classifications (for the Mexican portion of the domain) with the NLCD classifications, and rasterize them.
-..* Inputs: the INEGI Uso del Suelo y Vegetacion classifications, SERIE I - V, which represent years 1985, 1993, 2002, 2007, and 2011.
-..* Outputs: the outputs are archived on [Zenodo](https://www.zenodo.org/record/2579442).
+ - Inputs: the INEGI Uso del Suelo y Vegetacion classifications, SERIE I - V, which represent years 1985, 1993, 2002, 2007, and 2011.
+ - Outputs: the outputs are archived on [Zenodo](https://www.zenodo.org/record/2579442).
 2. Merge the harmonized INEGI rasters with the NLCD products for complete coverage over the US and Mexico.
-..* Inputs: For Mexico, use the output of stage 1 (either run stage 1 or download outputs from [Zenodo](https://www.zenodo.org/record/2579442).). For the continental US, the NLCD land cover products for years 1992, 2001, and 2011, plus the NLCD 1992/2001 land cover change retrofit product, available from [MRLC](https://www.mrlc.gov/data).
-..* Outputs: the outputs are archived on [Zenodo](https://www.zenodo.org/record/2580428)
+ - Inputs: For Mexico, use the output of stage 1 (either run stage 1 or download outputs from [Zenodo](https://www.zenodo.org/record/2579442).). For the continental US, the NLCD land cover products for years 1992, 2001, and 2011, plus the NLCD 1992/2001 land cover change retrofit product, available from [MRLC](https://www.mrlc.gov/data).
+ - Outputs: the outputs are archived on [Zenodo](https://www.zenodo.org/record/2580428)
 
 ## Contents:
 1. tools/

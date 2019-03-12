@@ -31,7 +31,7 @@ These products need to be opened in a GIS application such as ESRI ArcGIS, repro
 
 This step uses the scripts and programs in the "tools/NLCD_INEGI" directory.
 
-###3.1. Compile C-programs
+### 3.1. Compile C-programs
 
 The following C-programs in the "tools/NLCD_INEGI" directory must be compiled on your system:
  - gridclip.c
@@ -40,11 +40,11 @@ The following C-programs in the "tools/NLCD_INEGI" directory must be compiled on
 These programs can be compiled on a LINUX system with the gcc compiler, e.g.:
    `gcc -lm gridclip.c -o gridclip`
 
-###3.2. Edit raster files
+### 3.2. Edit raster files
 
 For all of the INEGI and NLCD rasters, all pixels outside the land/political boundaries should be set to 0, and the "nodata" value in the header should be 0 as well. This can be done in a text editor.
 
-###3.3. Clip all products to 1x1 degree "tiles"
+### 3.3. Clip all products to 1x1 degree "tiles"
 
 For each raster file, run the following script:
 
@@ -62,7 +62,7 @@ where
  - `$YEAR` = 1992, 2001, or 2011 (NLCD); or 1993, 2002, or 2011 (INEGI)
  - `$PREFIX` = "inegi" or "nlcd" as appropriate
 
-###3.4. Create a more correct version of the NLCD 1992 map
+### 3.4. Create a more correct version of the NLCD 1992 map
 
 NLCD's 1992 product was created by a different method than later years. To reconcile between 1992 and 2001 maps, NLCD created the 1992/2001 landcover change retrofit product. To make this retrofit product, the more detailed classifications of the 1992 and 2001 products were grouped into 9 broad classes (Anderson level I classification).  The retrofit product therefore shows changes between differetn Anderson Level I classes. This loss of detail poses problems when trying to use the more detailed NLCD 2011 classification scheme.
 
@@ -74,7 +74,7 @@ where
 
  - `$DATADIR` = path to where inputs and outputs should be stored (top level)
 
-###3.5. Combine the NLCD and INEGI 1x1 tiles for each year
+### 3.5. Combine the NLCD and INEGI 1x1 tiles for each year
 
 Run the command:
 
@@ -87,7 +87,7 @@ where
  - `$YEAR_N` = year of the NLCD product (1992,2001,2011)
  - `$YEAR_OUT` = year of the NLCD product (1992,2001,2011)
 
-###3.6. Create stable_2001-2011 dataset
+### 3.6. Create stable_2001-2011 dataset
 
 Run the command:
 

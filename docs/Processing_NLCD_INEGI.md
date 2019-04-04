@@ -31,14 +31,9 @@ These products need to be opened in a GIS application such as ESRI ArcGIS, repro
 
 This step uses the scripts and programs in the "tools/NLCD_INEGI" directory.
 
-### 3.1. Compile C-programs
+### 3.1. Download and Compile AscGridTools
 
-The following C-programs in the "tools/NLCD_INEGI" directory must be compiled on your system:
- - gridclip.c
- - grid_overlay.c
-
-These programs can be compiled on a LINUX system with the gcc compiler, e.g.:
-   `gcc -lm gridclip.c -o gridclip`
+The scripts in the `tools/NLCD_INEGI` directory depend on tools from the [`AscGridTools` Git repo](https://github.com/tbohn/AscGridTools). Obtain `AscGridTools` by either forking or cloning the repo, and follow the instructions to compile the tools.
 
 ### 3.2. Edit raster files
 

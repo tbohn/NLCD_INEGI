@@ -13,7 +13,7 @@ This project contains scripts used to created harmonized US-Mexico land cover cl
 ## Contents:
 1. tools/
  - INEGI/ - arcPy scripts for stage 1, i.e., harmonizing the INEGI Uso del Suelo y Vegetacion classifications with the NLCD 2011 classification categories, reprojecting to geographic, and rasterizing.
- - NLCD_INEGI/ - tools written in C and Perl for stage 2, i.e., constructing an NLCD 1992 product consistent with the classifications of NLCD 2001 and 2011, merging the NLCD maps with the INEGI maps, and creating the "stable_2001-2011" dataset.
+ - NLCD_INEGI/ - Perl scripts for stage 2, i.e., constructing an NLCD 1992 product consistent with the classifications of NLCD 2001 and 2011, merging the NLCD maps with the INEGI maps, and creating the "stable_2001-2011" dataset.
 2. docs/
  - [Processing_of_INEGI_USOSV_dataset.docx](docs/Processing_of_INEGI_USOSV_dataset.docx) - Description of procedure for harmonizing the INEGI Uso del Suelo y Vegetacion classifications with the NLCD 2011 classification categories, reprojecting to geographic, and rasterizing.
  - [Processing_NLCD_INEGI.md](docs/Processing_NLCD_INEGI.md) - Description of procedure for constructing an NLCD 1992 product consistent with the classifications of NLCD 2001 and 2011, and for merging the NLCD maps with the INEGI maps.

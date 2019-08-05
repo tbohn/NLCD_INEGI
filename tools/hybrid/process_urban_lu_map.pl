@@ -10,9 +10,15 @@ $lu_codes_table = shift;
 $nlcd_map = shift;
 $lu_map_out = shift;
 
+# Read cellsize from header of nlcd map
+$tmp = `grep -i cellsize $nlcd_map`;
+chomp $tmp;
+($tmp2, $cellsize_nlcd) = split /\s+/, $tmp;
+$cellsize_str = "$cellsize_nlcd" . "_deg.asc";
+
 # Subsample land cover map to nlcd resolution
 $lu_map_sub = $lu_map;
-$lu_map_sub =~ s/\.([\d\.]+_deg).asc$/.0.000350884_deg.asc/;
+$lu_map_sub =~ s/\.([\d\.]+_deg).asc$/.$cellsize_str/;
 $cmd = "grid_subsample $lu_map int 0.0003508840696170 nn 0 int 16 0 tmp.asc";
 (system($cmd)==0) or die "$0: ERROR: $cmd failed\n";
 $cmd = "gridclip tmp.asc int $minlon $maxlon $minlat $maxlat 16 0 $lu_map_sub";

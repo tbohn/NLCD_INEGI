@@ -73,7 +73,9 @@ For each 1x1 tile (or for a single file containing the domain of interest): run 
 
 where
 
- - `$LAND_USE_FILE` = name of the historical or future land use file file
+ - `$LAND_USE_FILE` = name of the historical or future land use file; the filename MUST follow the format `$NAME.$RESOLUTION_deg.asc` where
+   - `$NAME` = the name of the land use map - this can be whatever you want  
+   - `$RESOLUTION` = grid resolution in decimal degrees, e.g. 0.000350884  
  - `$LAT0` = the minimum latitude of the file
  - `$LAT1` = the maximum latitude of the file
  - `$LON0` = the minimum longitude of the file

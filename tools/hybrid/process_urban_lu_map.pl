@@ -34,13 +34,13 @@ foreach (<FILE>) {
   if (/^#/) {next;}
   chomp;
   @fields = split /,/;
-  if ($fields[2] =~ /null/i) {
+  if ($fields[3] =~ /null/i) {
     $null{$fields[0]} = 1;
   }
-  elsif ($fields[2] =~ /mix/i) {
+  elsif ($fields[3] =~ /mix/i) {
     $mixed{$fields[0]} = 1;
   }
-  elsif ($fields[2] ne "") {
+  elsif ($fields[3] ne "") {
     $replace{$fields[0]} = $fields[2];
   }
 }
